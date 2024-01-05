@@ -1,4 +1,5 @@
 import 'package:design_task/screens/task_one.dart';
+import 'package:design_task/screens/task_three.dart';
 import 'package:design_task/screens/task_two.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class Listtasks extends StatefulWidget {
 }
 
 class _ListtasksState extends State<Listtasks> {
-  List<Widget> allTasks = [const TaskOne(), const TaskTwo()];
+  List<Widget> allTasks = [const TaskOne(), const TaskTwo(), const TaskThree()];
 
   @override
   Widget build(BuildContext context) {

@@ -192,8 +192,16 @@ class CurvesPaint extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint line = Paint()
       ..strokeWidth = 3.0
-      ..style = PaintingStyle.stroke;
+      ..style = PaintingStyle.fill;
     Offset center = Offset(size.width / 2, size.height / 2);
+    Path path = Path();
+    path.moveTo(0.0, 0.0);
+    path.lineTo(0.0, 200.0);
+    path.quadraticBezierTo(size.width / 2, 250, size.width, 200.0);
+    path.lineTo(size.width, 0.0);
+    path.close();
+
+    canvas.drawPath(path, line);
   }
 
   @override
